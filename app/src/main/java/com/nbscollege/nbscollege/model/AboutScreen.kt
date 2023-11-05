@@ -1,4 +1,4 @@
-package com.nbscollege.nbscollege
+package com.nbscollege.nbscollege.model
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
@@ -19,11 +19,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.nbscollege.nbscollege.model.Statement
+import com.nbscollege.nbscollege.R
+import com.nbscollege.nbscollege.dataclass.Statement
 
 
 @Composable
-fun aboutScreen(
+fun AboutScreen(
     statement: List<Statement> = listOf(
         Statement("Vision","NBS College is the Philippine school of choice of aspiring leaders and professionals who have strong educational entrepreneurial background to uplift the Philippines and global society.\n"),
         Statement("Mission","NBS College aims to create, with full support from highly esteemed and long-standing nationwide institution, National Book Store, an academic environment for students to transform them into responsible and productive citizens who will make a positive difference in society.\n"),
@@ -66,29 +67,29 @@ fun aboutScreen(
                     containerColor = Color.Yellow,
                 ),
                 modifier = Modifier
-                    .size(width = 340.dp, height = 440.dp)
+                    .size(width = 330.dp, height = 400.dp)
 
             ) {
                 statement.forEach { item ->
                     Text(
                         text = item.title,
-                        fontWeight = FontWeight.SemiBold,
+                        fontWeight = FontWeight.ExtraBold,
                         fontSize = 22.sp,
-                        color = Color.Blue,
+                        color = Color.Black
                     )
                     Spacer(
                         modifier = Modifier
-                            .padding(top = 10.dp)
+                            .padding(top = 5.dp)
                     )
                     Text(
                         text = item.description,
                         fontWeight = FontWeight.SemiBold,
                         fontSize = 14.sp,
                         color = Color.Blue,
+                        textAlign = TextAlign.Justify
                     )
                 }
             }
-
-            }
         }
     }
+}

@@ -1,4 +1,4 @@
-package com.nbscollege.nbscollege
+package com.nbscollege.nbscollege.model
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
@@ -19,10 +19,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import com.nbscollege.nbscollege.R
 
 
 @Composable
-fun programDetails() {
+fun ProgramDetails(
+//    navController: NavController.Companion
+) {
 
     Box(
         modifier = Modifier
@@ -59,29 +63,31 @@ fun programDetails() {
                     containerColor = Color.Yellow,
                 ),
                 modifier = Modifier
-                    .size(width = 320.dp, height = 300.dp)
+                    .size(width = 300.dp, height = 300.dp)
 
             ){
                 Text(
                     text = "BS Computer Science\n",
-                    fontWeight = FontWeight.SemiBold,
+                    fontWeight = FontWeight.ExtraBold,
                     fontSize = 20.sp,
                     color = Color.Blue,
                     textAlign = TextAlign.Center,
                     modifier = Modifier
                         .fillMaxWidth()
+                        .padding(top = 5.dp)
                 )
                 Text(
                     text = "Description:",
                     fontWeight = FontWeight.ExtraBold,
                     fontSize = 16.sp,
-                    color = Color.Blue,
+                    color = Color.Black,
                     textAlign = TextAlign.Left,
                     modifier = Modifier
                         .fillMaxWidth()
+
                 )
                 Text(
-                    text = "program that includes the study of computing concepts and theories, algorithmic foundations, and new developments in computing.\n",
+                    text = "->program that includes the study of computing concepts and theories, algorithmic foundations, and new developments in computing.\n",
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 16.sp,
                     color = Color.Blue,
@@ -93,15 +99,15 @@ fun programDetails() {
                     text = "Career Opportunities:",
                     fontWeight = FontWeight.ExtraBold,
                     fontSize = 16.sp,
-                    color = Color.Blue,
+                    color = Color.Black,
                     textAlign = TextAlign.Left,
                     modifier = Modifier
                         .fillMaxWidth()
                 )
                 Text(
-                    text = "Software Engineer\n" +
-                            "Mobile Application Developer\n" +
-                            "System Analyst",
+                    text = "->Software Engineer\n" +
+                            "->Mobile Application Developer\n" +
+                            "->System Analyst",
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 16.sp,
                     color = Color.Blue,
